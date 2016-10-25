@@ -1,6 +1,6 @@
 # pull-vinyl [![NPM version](https://badge.fury.io/js/pull-vinyl.svg)](https://npmjs.org/package/pull-vinyl) [![Build Status](https://travis-ci.org/jamen/pull-vinyl.svg?branch=master)](https://travis-ci.org/jamen/pull-vinyl)
 
-> Read or write `Vinyl` objects in the file system.
+> Read and write `Vinyl` objects in the file system.
 
 ```js
 pull(
@@ -14,6 +14,8 @@ pull(
   vinyl.dest('output')
 )
 ```
+
+For reading and writing [`Vinyl`](https://github.com/gulpjs/vinyl) objects to and from the file system with pull streams.  It is inspired from [`vinyl-fs`](https://github.com/gulpjs/vinyl-fs)
 
 ## Installation
 
@@ -30,7 +32,7 @@ Read `Vinyl` objects from the file system with patterns from [`pull-glob`](https
  - `pattern`: A glob pattern resolved by `pull-glob`.
  - `options` (`Object`): Options for reading.
 
-It works as a [pull-stream source](https://github.com/pull-stream/pull-stream#source-aka-readable):
+It works as a [pull stream source](https://github.com/pull-stream/pull-stream#source-aka-readable):
 
 ```js
 pull(
