@@ -1,0 +1,1 @@
+This file contains foo.  Very nice foo.  Foo is used in test because it is nice.

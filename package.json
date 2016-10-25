@@ -1,0 +1,42 @@
+{
+  "name": "pull-vinyl",
+  "description": "Read and write Vinyl objects from file system in pull streams.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jamen/pull-vinyl",
+  "author": "Jamen Marz (https://github.com/jamen)",
+  "repository": "jamen/pull-vinyl",
+  "bugs": {
+    "url": "https://github.com/jamen/pull-vinyl/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "eslint index.js 'test/*.js' && tape 'test/*.js' | tap-spec"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "mkdirp": "^0.5.1",
+    "pull-stream": "^3.4.5",
+    "rimraf": "^2.5.4",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2"
+  },
+  "dependencies": {
+    "globby": "^6.0.0",
+    "pull-glob": "^1.0.6",
+    "pull-stream": "^3.4.5",
+    "vinyl-file": "^2.0.0",
+    "vinyl-write": "^0.2.0"
+  }
+}

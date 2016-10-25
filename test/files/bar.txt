@@ -1,0 +1,1 @@
+This file contains bar.  Very nice bar.  Bar is used in test because it is nice.
