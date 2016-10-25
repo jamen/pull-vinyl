@@ -18,6 +18,13 @@
   "engines": {
     "node": ">=4"
   },
+  "keywords": [
+    "pull-stream",
+    "vinyl",
+    "file",
+    "gulp",
+    "fs"
+  ],
   "scripts": {
     "test": "eslint index.js 'test/*.js' && tape 'test/*.js' | tap-spec"
   },

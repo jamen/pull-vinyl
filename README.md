@@ -10,12 +10,12 @@ pull(
   // Transform them somehow, i.e. with a compiler.
   transformVinyl(),
 
-  // WWrite them
+  // Write them
   vinyl.dest('output')
 )
 ```
 
-For reading and writing [`Vinyl`](https://github.com/gulpjs/vinyl) objects to and from the file system with pull streams.  It is inspired from [`vinyl-fs`](https://github.com/gulpjs/vinyl-fs)
+Reading and writing [`Vinyl`](https://github.com/gulpjs/vinyl) objects to/from the file system with pull streams.  It is inspired from [`vinyl-fs`](https://github.com/gulpjs/vinyl-fs) from gulp.
 
 ## Installation
 
@@ -36,16 +36,17 @@ It works as a [pull stream source](https://github.com/pull-stream/pull-stream#so
 
 ```js
 pull(
+  // Resolve glob into `Vinyl` objects.
   vinyl.src('foo/**/*.js'),
-  // transform `Vinyl` objects
-  // then write them
+  // Transform `Vinyl` objects...
+  // Then write them:
   vinyl.dest('bar')
 )
 ```
 
 ### `vinyl.dest(directory)`
 
-Write `Vinyl` objects at the specified `directory` being the base.  You can use `vinyl.write` as an alias.
+Write `Vinyl` objects at the `directory` base.  You can use `vinyl.write` as an alias.
 
  - `directory` (`String`): The base directory for the `Vinyl` objects.
 
