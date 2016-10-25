@@ -11,10 +11,10 @@ exports.dest = exports.write = write
  * Read a glob or path from the file system
  * and source `Vinyl` objects.
  */
-function read (patterns, options) {
+function read (pattern, options) {
   return pull(
     // Resolve patterns to file paths
-    glob(patterns),
+    glob(pattern),
 
     // Map file paths to `Vinyl` objects
     pull.asyncMap(function (filePath, cb) {
