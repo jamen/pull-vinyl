@@ -1,7 +1,7 @@
 {
   "name": "pull-vinyl",
   "description": "Read and write `Vinyl` objects in the file system.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jamen/pull-vinyl",
   "author": "Jamen Marz (https://github.com/jamen)",
   "repository": "jamen/pull-vinyl",
