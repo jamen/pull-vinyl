@@ -63,6 +63,25 @@ pull(
 )
 ```
 
+### `vinyl.map(filename, [dirname, done])`
+
+A wrapper around [`vinyl-source-stream`](https://npmjs.com/vinyl-source-stream).  Turns piped items into vinyl files
+
+```js
+pull(
+  // Pipe some data:
+  pull.values([ Buffer.from('hello world') ]),
+
+  // Map it to a file:
+  vinyl.map('bar.js', '/foo'),
+
+  // Use it
+  pull.drain(function (file) {
+    console.log(file)
+  })
+)
+```
+
 ## License
 
 MIT © [Jamen Marz](https://github.com/jamen)

@@ -46,3 +46,15 @@ test('reading then writing vinyl files', t => {
     })
   )
 })
+
+test('map', t => {
+  t.plan(1)
+
+  pull(
+    pull.values([ Buffer.from('hello world') ]),
+    vinyl.map('bar.js', '/foo'),
+    pull.drain(function (file) {
+      t.is(file.path, '/foo/bar.js', 'correct path')
+    })
+  )
+})

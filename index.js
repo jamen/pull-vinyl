@@ -1,11 +1,14 @@
 var vinylFile = require('vinyl-file').read
 var vinylWrite = require('vinyl-write')
+var source = require('vinyl-source-stream')
 var glob = require('pull-glob')
 var pull = require('pull-stream')
+var toPull = require('stream-to-pull-stream')
 var path = require('path')
 
 exports.src = exports.read = read
 exports.dest = exports.write = write
+exports.map = map
 
 /**
  * Read a glob or path from the file system
@@ -41,4 +44,11 @@ function write (dir, done) {
       })
     })
   }
+}
+
+function map (filename, basedir, done) {
+  if (!done && typeof basedir === 'function') {
+    done = basedir, basedir = null
+  }
+  return toPull(source(filename, basedir), done)
 }

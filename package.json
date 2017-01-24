@@ -26,7 +26,7 @@
     "fs"
   ],
   "scripts": {
-    "test": "eslint index.js 'test/*.js' && tape 'test/*.js' | tap-spec"
+    "test": "tape 'test/*.js' | tap-spec"
   },
   "devDependencies": {
     "eslint": "^3.8.1",
@@ -42,7 +42,9 @@
   "dependencies": {
     "pull-glob": "^1.0.6",
     "pull-stream": "^3.4.5",
+    "stream-to-pull-stream": "^1.7.2",
     "vinyl-file": "^2.0.0",
+    "vinyl-source-stream": "^1.1.0",
     "vinyl-write": "^0.2.2"
   }
 }
