@@ -31,8 +31,7 @@ test('reading vinyl files', t => {
 test('reading then writing vinyl files', t => {
   pull(
     vinyl.src(`${__dirname}/files/**/*.js`, { base: `${__dirname}/files` }),
-    vinyl.dest(`${__dirname}/output`),
-    pull.collect(err => {
+    vinyl.dest(`${__dirname}/output`, err => {
       t.false(err, 'no error')
 
       var exists = true

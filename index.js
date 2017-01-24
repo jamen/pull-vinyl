@@ -29,18 +29,16 @@ function read (pattern, options) {
  * Write `Vinyl` objects to the file system
  * as a sink stream.
  */
-function write (dir) {
+function write (dir, done) {
   return function (read) {
-    return function (end, cb) {
-      read(end, function next (end, file) {
-        if (end) return cb(end)
-
-        // Change base to the specificied directory
-        file.path = path.resolve(dir, file.relative)
-
-        // Write the file
-        vinylWrite(file, cb)
+    read(null, function next (end, file) {
+      if (end) return done(end === true ? null : end)
+      // Change base to the specificied directory
+      file.path = path.resolve(dir, file.relative)
+      // Write the file
+      vinylWrite(file, function (err) {
+        read(err, next)
       })
-    }
+    })
   }
 }

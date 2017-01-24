@@ -40,7 +40,6 @@
     "tape": "^4.6.2"
   },
   "dependencies": {
-    "globby": "^6.0.0",
     "pull-glob": "^1.0.6",
     "pull-stream": "^3.4.5",
     "vinyl-file": "^2.0.0",
