@@ -42,9 +42,8 @@
   "dependencies": {
     "pull-glob": "^1.0.6",
     "pull-stream": "^3.4.5",
-    "stream-to-pull-stream": "^1.7.2",
+    "vinyl": "^2.0.1",
     "vinyl-file": "^2.0.0",
-    "vinyl-source-stream": "^1.1.0",
     "vinyl-write": "^0.2.2"
   }
 }

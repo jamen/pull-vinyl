@@ -10,7 +10,7 @@ function clean () {
 clean()
 test.onFinish(clean)
 
-test('reading vinyl files', t => {
+test('read', t => {
   pull(
     vinyl.src(`${__dirname}/files/**/*.txt`, { base: `${__dirname}/files` }),
     pull.collect((err, files) => {
@@ -28,7 +28,7 @@ test('reading vinyl files', t => {
   )
 })
 
-test('reading then writing vinyl files', t => {
+test('write', t => {
   pull(
     vinyl.src(`${__dirname}/files/**/*.js`, { base: `${__dirname}/files` }),
     vinyl.dest(`${__dirname}/output`, err => {

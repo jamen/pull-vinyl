@@ -44,11 +44,11 @@ pull(
 )
 ```
 
-### `vinyl.dest(directory)`
+### `vinyl.dest([base]])`
 
 Write `Vinyl` objects at the `directory` base.  You can use `vinyl.write` as an alias.
 
- - `directory` (`String`): The base directory for the `Vinyl` objects.
+ - `base` (`String`): The base directory for the `Vinyl` objects.  Defaults to `file.base`.
 
 ```js
 pull(
@@ -63,9 +63,12 @@ pull(
 )
 ```
 
-### `vinyl.map(filename, [dirname, done])`
+### `vinyl.map(name, [base])`
 
-A wrapper around [`vinyl-source-stream`](https://npmjs.com/vinyl-source-stream).  Turns piped items into vinyl files
+Maps data into vinyl files.  Essentially [`vinyl-source-stream`](https://npmjs.com/vinyl-source-stream) as a pull-stream.
+
+ - `name` (`String`|`Function`): String of file's name, or a function to handle per item.
+ - `base` (`String`|`Function`): Optional base directory string, or a function to handle per item.
 
 ```js
 pull(
